@@ -1,0 +1,101 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            // 1 For the Given array: [23,34,54,0,4,7] print all the Array values using a for loop. Expected output:23 34 54 0 4 7
+            var a=[23,34,54,0,4,7];
+            for(i=0;i<=a.length-1;i++){
+                console.log(a[i]);
+            }
+            // print all numbers in an array except the first element. Expected output: 34 54 0 4 7
+            var a=[23,34,54,0,4,7];
+            for(i=1;i<=a.length-1;i++){
+                console.log(a[i]);
+            }
+            // 3 Print all elements in an array except the last element Expected output: 23 34 54 0 4
+            var a=[23,34,54,0,4,7];
+            for(i=0;i<=a.length-2;i++){
+                console.log(a[i]);
+            }
+            // 4 Print all the numbers from last index to first index Expected output: 7 4 0 54 34 23
+            var a=[23,34,54,0,4,7];
+            for(i=5;i<=a.length-1&i>=0;i--){
+                console.log(a[i])
+            }
+            // 5 Print all the numbers from last index to first index except the first element Expected output: 4 0 54 34 23
+            var a=[23,34,54,0,4,7];
+            for(i=4;i<=a.length-1&i>=0;i--){
+                console.log(a[i])
+            }
+            // 6 Print all the numbers from last index to first index except the last element Expected output: 7 4 0 54 34
+            var a=[23,34,54,0,4,7];
+            for(i=5;i<=a.length-1&i>=1;i--){
+                console.log(a[i])
+            }
+            // 7 Print only the last 4 elements of an array. Expected output: 54 0 4 7
+            var a=[23,34,54,0,4,7];
+            for(i=2;i<=a.length-1;i++){
+                console.log(a[i])
+            }
+            // 8 For the Given array: [23,34,54,10,4,7] print values that are greater than the given number. Given number: 20, Expected output: 23,34,54
+            var a=[23,34,54,0,4,7];
+            for(i=0;i<=a.length-1&a[i]>20;i++){
+                console.log(a[i])
+            }
+            // 9 For the Given array: [23,34,54,10,4,7] print all the even numbers in an Array. Expected output:34,54,10,4
+            var a=[23,34,54,0,4,7];
+            for(i=0;i<=a.length-1;i++){
+                if(a[i]%2==0){
+                    console.log(a[i])
+                }
+            }
+            // 10 For the Given array: [23,34,54,10,4,7] print all the odd numbers in an Array. Expected output:23,7
+            var a=[23,34,54,0,4,7];
+            for(i=0;i<=a.length-1;i++){
+                if(a[i]%2!=0){
+                    console.log(a[i])
+                }
+            }
+            // 11 For the Given array: [23,-34,-54,10,-4,7] print all the positive numbers in an array. Expected output: 23,10,7
+            var a=[23,-34,-54,10,-4,7];
+            for(i=0;i<=a.length-1;i++){
+                if(a[i]>0){
+                    console.log(a[i])
+                }
+            }
+            // 12 Print only the 2 digit numbers from an array
+            var a=[23,34,54,10,4,7];
+            for(i=0;i<=a.length-1;i++){
+                if(a[i]>=10){
+                    console.log(a[i])
+                }
+            }
+            // 13 Print only multiples of 5 from an array
+            var a=[23,34,54,10,4,7];
+            for(i=0;i<=a.length-1;i++){
+                if(a[i]%5==0){
+                    console.log(a[i])
+                }
+            }
+            // 14 Print only multiples of 2 AND 3 from an array
+            var a=[23,34,54,10,4,7];
+            for(i=0;i<=a.length-1;i++){
+                if(a[i]%2==0 & a[i]%3==0){
+                    console.log(a[i])
+                }
+            }
+            // 15 Print only multiples of 3 OR 5 from an array
+            var a=[23,34,54,10,4,7];
+            for(i=0;i<=a.length-1;i++){
+                if(a[i]%3==0 || a[i]%5==0){
+                    console.log(a[i])
+                }
+            }
+            // 16 For the Given array: [23,34,54,10,4,7] print the minimum number in an Array. Expected output: 4
+            var a=[23,34,54,10,4,7];
+            
+        </script>
+    </body>
+</html>

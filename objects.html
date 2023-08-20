@@ -1,0 +1,55 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            // 1 Print the firstname.
+            var person = {
+                            firstName: "Harry",
+                            lastName : "Potter",
+                            age: 30,
+                            gender : "male",
+                            skill : "ReactJS",
+                            Expertise: "Beginner"
+                        }
+            console.log(person.firstName);
+            console.log(person.lastName);
+            console.log(person.firstName,person.lastName);
+            for(var k in person){
+                if(k[2]<18){
+                    console.log("false")
+                }
+                else{
+                    console.log("true")
+                }
+            }
+            // 2
+            var marks = {
+                maths : 34,
+                english : 56,
+                science: 32,
+                hindi: 75,
+                socialscience : 65
+                }
+            for(var k in marks){
+                console.log(marks[k]);
+            }
+            for(var k in marks){
+                console.log(k);
+            }
+            var count=0;
+            for(var k in marks){
+                count=count+1
+            }
+            console.log(count);
+            var total=0;
+            var per;
+            for(var k in marks){
+                for(marks[k] in marks){
+                    total=total+marks[k];
+                }
+                total=total/5;
+                console.log(total);
+            }
+        </script>
+    </body>
+</html>
