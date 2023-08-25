@@ -1,0 +1,444 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            // 1
+            var products = [
+                            {
+                            "name": "Duracell - AAA Batteries (4-Pack)",
+                            "type": "HardGood",
+                            "price": 5.49,
+                            "category": "Household Batteries",
+                            "manufacturer": "Duracell",
+                            },
+                            {
+
+                            "name": "Hard Rock TrackPak - Mac",
+                            "type": "Software",
+                            "price": 29.99,
+                            "category": "Recording Equipment",
+                            "manufacturer": "Hal Leonard",
+                            },
+                            {
+                            "name": "Duracell - AA 1.5V CopperTop Batteries (4-Pack)",
+                            "type": "HardGood",
+                            "price": 5.62,
+                            "category": "Household Batteries",
+                            "manufacturer": "Duracell",
+                            },
+                            {
+                            "name": "Energizer - MAX Batteries AA (4-Pack)",
+                            "type": "HardGood",
+                            "price": 5.32,
+                            "category": "Household Batteries",
+                            "manufacturer": "Energizer",
+                            },
+                            {
+                            "name": "METRA - Antenna Cable Adapter - Black",
+                            "type": "HardGood",
+                            "price": 13.99,
+                            "category": "Antennas & Adapters",
+                            "manufacturer": "Metra",
+                            },
+                            {
+                            "name": "WipeDrive Six - Mac|Windows",
+                            "type": "Software",
+                            "price": 23.99,
+                            "category": "Maintenance Software",
+                            "manufacturer": "White Canyon",
+                            }
+                            ];
+            // for(i=0;i<products.length-1;i++){
+            //     console.log(products[i].name)
+            // }
+            // for(i=0;i<products.length-1;i++){
+            //     if(products[i].type=='HardGood'){
+            //         console.log(products[i].type)
+            //     }
+            // }
+            // for(i=0;i<products.length-1;i++){
+            //     if(products[i].type=='Software'){
+            //         console.log(products[i].type)
+            //     }
+            // }
+            // for(i=0;i<products.length-1;i++){
+            //     console.log(products[i].category)
+            // }
+            // for(i=0;i<products.length-1;i++){
+            //     if(products[i].manufacturer=='Duracell'){
+            //         console.log(products[i])
+            //     }
+            // }
+            // for(i=0;i<products.length-1;i++){
+            //     if(products[i].price>14.99){
+            //         console.log(products[i])
+            //     }
+            // }
+            // for(i=0;i<products.length-1;i++){
+            //     if(products[i].price<9.99){
+            //         console.log(products[i])
+            //     }
+            // }
+            
+            // using forEach
+            // 1
+            // products.forEach(function(value,index,array){
+            //     console.log(value.name)
+            // });
+            // // 2
+            // products.forEach(function(value,index,array){
+            //     if(value.type=='HardGood'){
+            //         console.log(value.type)
+            //     }
+            // });
+            // // 3
+            // products.forEach(function(value,index,array){
+            //     if(value.type=='Software'){
+            //         console.log(value.type)
+            //     }
+            // });
+            // // 4
+            // products.forEach(function(value,index,array){
+            //     console.log(value.category)
+            // });
+            // // 5
+            // products.forEach(function(value,index,array){
+            //     if(value.manufacturer=='Duracell'){
+            //         console.log(value)
+            //     }
+            // });
+            // //6
+            // products.forEach(function(value,index,array){
+            //     if(value.price>14.99){
+            //         console.log(value)
+            //     }
+            // });
+            // // 7
+            // products.forEach(function(value,index,array){
+            //     if(value.price<9.99){
+            //         console.log(value)
+            //     }
+            // });
+            // // 8
+            // total=0;
+            // products.forEach(function(value,index,array){
+            //     if(value.type=='HardGood'){
+            //         total=total+value.price
+            //     }
+            // })
+            // console.log(total);
+            // // 9
+            // total=0;
+            // count=0;
+            // products.forEach(function(value,index,array){
+            //     if(value.type=='Software'){
+            //         count++;
+            //         total=total+value.price;
+            //     }
+            // })
+            // avg=total/count;
+            // console.log(avg);
+            // // 10
+            // var a=products.sort(function(value,index,array){
+            //     if(value.price<index.price){
+            //         return -1;
+            //     }
+            //     if(index.price<value.price){
+            //         return 1;
+            //     }
+            //     return 0;
+            // });
+            // a.forEach(function(a){
+            //     console.log(a.name)
+            // })
+
+            // 2 Question
+            var people = [
+                        {
+                        "firstname": "praveen",
+                        "lastname": "gubbala",
+                        "age": 36,
+                        "gender": "male",
+                        "city": "hyd",
+                        "salary": 10000
+                        },
+                        {
+                        "firstname": "srikanth",
+                        "lastname": "gubbala",
+                        "age": 32,
+                        "gender": "male",
+                        "city": "bengaluru",
+                        "salary": 20000
+                        },
+                        {
+                        "firstname": "pradeep",
+                        "lastname": "reddy",
+                        "age": 21,
+                        "gender": "male",
+                        "city": "hyd",
+                        "salary": 25000
+                        },
+                        {
+                        "firstname": "mounika",
+                        "lastname": "mudiraj",
+                        "age": 20,
+                        "gender": "female",
+                        "city": "nalgonda",
+                        "salary": 30000
+                        },
+                        {
+                        "firstname": "nikhil",
+                        "lastname": "m",
+                        "age": 22,
+                        "gender": "male",
+                        "city": "guntur",
+                        "salary": 2000
+
+                        },
+                        {
+                        "firstname": "riya",
+                        "lastname": "bhadouria",
+                        "age": 14,
+                        "gender": "female",
+                        "city": "indore",
+                        "salary": 40000
+                        }
+                        ];
+            // //Print all the male names whose age is greater than 25.
+            // for(i=0;i<people.length-1;i++){
+            //     if(people[i].age>25){
+            //         if(people[i].gender=="male"){
+            //             console.log(people[i].firstname)
+            //         }
+            //     }
+            // }
+            // // decreasing order of the salary
+            // var a;
+            // for(i=0;i<people.length-1;i++){
+            //     for(j=i+1;j<people.length;j++){
+            //         if(people[i].salary>people[j].salary){
+            //             a=people[i].firstname
+            //             people[i].firstname=people[j].firstname
+            //             people[j].firstname=a 
+            //         }
+            //     }
+            // }
+            // for(i=0;i<people.length;i++){
+            //     console.log(people[i].firstname)
+            // }
+            //  //increasing order of their age
+            //  var a;
+            // for(i=0;i<people.length-1;i++){
+            //     for(j=i+1;j<people.length;j++){
+            //         if(people[i].age<people[j].age){
+            //             a=people[i].firstname
+            //             people[i].firstname=people[j].firstname
+            //             people[j].firstname=a
+
+            //         }
+            //     }
+            // }
+            // for(i=0;i<people.length;i++){
+            //     console.log(people[i].age)
+            // }
+            // //names in  reverse alphabetical order
+            // var a;
+            // for(i=0;i<people.length-1;i++){
+            //     for(j=i+1;j<people.length;j++){
+            //         if(people[i].firstname<people[j].firstname){
+            //             a=people[i].firstname
+            //             people[i].firstname=people[j].firstname
+            //             people[j].firstame=a;
+
+            //         }
+            //     }
+            // }
+            // for(i=0;i<people.length;i++){
+            //     console.log(people[i].firstname)
+            // }
+            // //alphabetical order
+            // var a;
+            // for(i=0;i<people.length-1;i++){
+            //     for(j=i+1;j<people.length;j++){
+            //         if(people[i].firstname>people[j].firstname){
+            //             a=people[i].firstname
+            //             people[i].firstname=people[j].firstname
+            //             people[j].firstname=a;
+            //         }
+            //     }
+            // }
+            // 
+            // 
+            // for(i=0;i<=people.length-1;i++){
+            //     console.log(people[i].firstname,people[i].lastname);
+            // }
+            // //
+            // for(i=0;i<=people.length-1;i++){
+            //     if(people[i].age>25){
+            //         console.log(people[i].firstname,people[i].lastname);
+            //     }
+            // }
+            // //
+            // for(i=0;i<=people.length-1;i++){
+            //     if(people[i].gender=="female"){
+            //         console.log(people[i].firstname,people[i].lastname);
+            //     }
+            // }
+            // //
+            // for(i=0;i<=people.length-1;i++){
+            //     if(people[i].salary>25000){
+            //         console.log(people[i].firstname,people[i].lastname);
+            //         increment=people[i].salary+15/100;
+            //         console.log(increment);
+            //     }
+            // }
+            // //
+            // var i = prompt();
+            // for(i=0;i<=people.length-1;i++){
+            //     if(people[i].city=="hyd"){
+            //         console.log(people[i].firstname,people[i].lastname);
+            //     }              
+            // }
+            // //
+            // total=0;
+            // for(i=0;i<=people.length-1;i++){
+            //     total=total+people[i].salary;
+            // }
+            // console.log(total);
+            // //
+            // for(i=0;i<=people.length-1;i++){
+            //     if(people[i].gender=="female"){
+            //         console.log(people[i].firstname,people[i].lastname);
+            //     }
+            // }
+            // //
+            // for(i=0;i<=people.length-1;i++){
+            //     if(people[i].salary>25000){
+            //         console.log(people[i].firstname);
+            //     }
+            // }
+
+            // using forEach
+            // 1
+            people.forEach(function(value){
+                console.log(value.firstname)
+            });
+            // 2
+            people.forEach(function(value){
+                console.log(value.firstname,value.lastname)
+            });
+            // 3
+            people.forEach(function(value){
+                if(value.age>25){
+                    console.log(value.firstname,value.lastname)
+                }
+            });
+            // 4
+            people.forEach(function(value){
+                if(value.gender=="female"){
+                    console.log(value.firstname)
+                }
+            });
+            // 5
+            people.forEach(function(value){
+                if(value.salary>25000){
+                    console.log(value.firstname)
+                    increment=value.salary+15/100;
+                    console.log(increment)
+                }
+            })
+            // 6
+            people.forEach(function(value){
+                if(value.city=='hyd'){
+                    console.log(value.firstname,value.lastname)
+                }
+            })
+            // 7
+            total=0;
+            people.forEach(function(value){
+                total=total+value.salary;
+                console.log(total);
+            })
+            // 8
+            // var b=prompt();
+            // people.forEach(function(value){
+            //     if(b.city=='hyd'){
+            //         console.log(value.name)
+            //     }
+            // })
+            // 9
+            var a=people.sort(function(a,b){
+                if(a.firstname<b.firstname){
+                    return -1;
+                }
+                if(b.firstname<a.firstname){
+                    return 1;
+                }
+                return 0;
+            })
+            a.forEach(function(a){
+                console.log(a.firstname)
+            })
+            // 10
+            var a=people.sort(function(a,b){
+                if(a.firstname<b.firstname){
+                    return 1;
+                }
+                if(b.firstname<a.firstname){
+                    return -1;
+                }
+                return 0;
+            })
+            a.forEach(function(a){
+                console.log(a.firstname)
+            })
+            // 11
+            var a=people.sort(function(a,b){
+                if(a.age<b.age){
+                    return -1;
+                }
+                if(b.age<a.age){
+                    return 1;
+                }
+                return 0;
+            })
+            a.forEach(function(a){
+                console.log(a.firstname)
+            })
+            // 12
+            var a=people.sort(function(a,b){
+                if(a.salary<b.salary){
+                    return 1;
+                }
+                if(b.salary<a.salary){
+                    return -1;
+                }
+                return 0;
+            })
+            a.forEach(function(a){
+                console.log(a.firstname,a.lastname)
+            })
+            // 13
+            people.forEach(function(value){
+                if(value.gender=='male'){
+                    if(value.age>25){
+                        console.log(value.firstname)
+                    }
+                }
+            })
+            // 14
+            var br=[];
+            people.forEach(function(value,index,array){
+                if(br.includes(value.city)){
+
+                }
+                else{
+                    br.push(value.city)
+                }
+            })
+            console.log(br)
+        </script>
+    </body>
+</html>

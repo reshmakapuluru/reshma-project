@@ -1,0 +1,159 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    </head>
+    <body>
+        <button onclick="tbs()">Table</button>
+        <!-- <input type="text"  onkeyup="abc()" id="dd"> -->
+        <button onclick="asc()">Ascending</button>
+        <button onclick="dsc()">Descending</button>
+        <table id="d1" style="border: 1px solid;">
+            <thead id="th"></thead>
+            <tfoot id="tf"></tfoot>
+        </table>
+        <script>
+            var x=document.getElementById('d1')
+            var t=document.getElementById('dd')
+            var tfoot=document.getElementById('tf')
+            var thead=document.getElementById('th')
+            var rt=document.createElement('tr')
+            var th=document.createElement('th')
+            th.innerHTML='User Id'
+            th.style.border='1px solid black'
+            rt.appendChild(th)
+            var et=document.createElement('th')
+            et.innerHTML='Id'
+            et.style.border='1px solid black'
+            rt.appendChild(et)
+            var ft=document.createElement('th')
+            ft.innerHTML="Title"
+            ft.style.border='1px solid black'
+            rt.appendChild(ft)
+            // var gt=document.createElement('th')
+            // gt.innerHTML="images"
+            // gt.style.border='1px solid black'
+            // rt.appendChild(gt)
+            x.appendChild(rt)
+
+            // function abc(){
+            //     axios.get("https://fakestoreapi.com/products").then(function(res){
+            //         var products=res.data;
+            //     var n=products.filter(function(a,i){
+            //         return(a.title.startsWith(a.value))  
+            //     }) 
+            //     tbs(n);
+            // })
+                
+            // }
+
+
+
+            function tbs(){
+                axios.get("https://jsonplaceholder.typicode.com/posts").then(function(res){
+                    var jobs=res.data;
+                    jobs.forEach(function(value,index){
+                    var tr=document.createElement('tr')
+                    var td=document.createElement('td')
+                    td.innerHTML=value.userId;
+                    td.style.border='1px solid black'
+                    tr.appendChild(td)
+                    var te=document.createElement('td')
+                    te.innerHTML=value.id;
+                    te.style.border='1px solid black'
+                    tr.appendChild(te)
+                    var tf=document.createElement('td')
+                    tf.innerHTML=value.title;
+                    tf.style.border='1px solid black'
+                    tr.appendChild(tf)
+                    // var tg=document.createElement('img')
+                    // tg.src=value.image
+                    // tg.style.border='1px solid black'
+                    // tg.style.width="100px"
+                    // tr.appendChild(tg)
+
+                    tfoot.appendChild(tr)
+                
+                  })
+                })
+            }
+
+            function asc(){
+                axios.get("https://jsonplaceholder.typicode.com/posts").then(function(res){
+                    var jobs=res.data;
+                    jobs.sort(function(a,b){
+                       if(a.title<b.title){
+                        return -1
+                       }
+                       if(a.title>b.title){
+                        return 1
+                       }
+                       return 0
+                    })
+                    x.innerHTML='';
+                    jobs.forEach(function(value,index){
+                    var tr=document.createElement('tr')
+                    var td=document.createElement('td')
+                    td.innerHTML=value.userId
+                    td.style.border='1px solid black'
+                    tr.appendChild(td)
+                    var te=document.createElement('td')
+                    te.innerHTML=value.id
+                    te.style.border='1px solid black'
+                    tr.appendChild(te)
+                    var tf=document.createElement('td')
+                    tf.innerHTML=value.title
+                    tf.style.border='1px solid black'
+                    tr.appendChild(tf)
+                    // var tg=document.createElement('img')
+                    // tg.src=value.image
+                    // tg.style.border='1px solid black'
+                    // tg.style.width="100px"
+                    // tr.appendChild(tg)
+
+                    tfoot.appendChild(tr)
+                
+                  })
+                })
+            }
+
+            function dsc(){
+                axios.get("https://jsonplaceholder.typicode.com/posts").then(function(res){
+                    var jobs=res.data;
+                    jobs.sort(function(a,b){
+                       if(a.title>b.title){
+                        return -1
+                       }
+                       if(a.title<b.title){
+                        return 1
+                       }
+                       return 0
+                    })
+                
+                    x.innerHTML=""
+                    jobs.forEach(function(value,index){
+                    var tr=document.createElement('tr')
+                    var td=document.createElement('td')
+                    td.innerHTML=value.userId;
+                    td.style.border='1px solid black'
+                    tr.appendChild(td)
+                    var te=document.createElement('td')
+                    te.innerHTML=value.id;
+                    te.style.border='1px solid black'
+                    tr.appendChild(te)
+                    var tf=document.createElement('td')
+                    tf.innerHTML=value.title;
+                    tf.style.border='1px solid black'
+                    tr.appendChild(tf)
+                    // var tg=document.createElement('img')
+                    // tg.src=value.image
+                    // tg.style.border='1px solid black'
+                    // tg.style.width="100px"
+                    // tr.appendChild(tg)
+
+                    tfoot.appendChild(tr)
+                  })
+                })
+            }
+        </script>
+    </body>
+</html>

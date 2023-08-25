@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    </head>
+    <body>
+        <button onclick="getProduct()">Products</button>
+        <ul id="d1"></ul>
+        <script>
+            var x=document.getElementById('d1')
+            x.setAttribute('class','card')
+            x.style.listStyle='none'
+            x.style.display='flex'
+            x.style.flexWrap='wrap'
+            function getProduct(){
+                axios.get("https://fakestoreapi.com/products").then(function(res){
+                    var products=res.data;
+                    console.log(products)
+                    function genUi(z){
+                    x.innerHTML=""
+                    x.setAttribute("class","card w-20")
+                    
+                    products.forEach(function(product){
+                        
+                        var y=document.createElement('li')
+                        y.setAttribute("class","card-body")
+                        y.setAttribute("class",'w-20')
+
+                        y.innerHTML="Title:"+product.title
+                        x.appendChild(y)
+                        // y.style.display="inline-block"
+                        y.style.padding="20px"
+                        y.style.marginLeft="10px"
+                        
+                        y.style.border="1px solid"
+                        y.style.marginBottom="10px"
+                        
+                        
+                        // y.style.width="200px"
+
+                        var z=document.createElement('div')
+                        z.setAttribute("class","card-body")
+                        z.innerHTML="Price:"+product.price
+                        y.appendChild(z)
+
+                        var w=document.createElement('div')
+                        w.setAttribute("class","card-body")
+                        w.innerHTML="Category:"+product.category
+                        y.appendChild(w)
+                        
+                        var v=document.createElement('img')
+                        v.setAttribute("class","card-img-top")
+                    
+                        v.src=product.image
+                        y.appendChild(v)
+                        v.style.width="200px";
+                        v.style.height="100px"
+                        // v.style.boxShadow="50%"
+                })
+            }
+            genUi();
+                })
+            }
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,121 @@
+<html>
+    <head>
+        <!-- <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    </head>
+    <body>
+        <button onclick="getJob()">Jobholder</button>
+        <button onclick="asc()">Ascending</button>
+        <button onclick="des()">Descending</button>
+
+        <ul id="d1"></ul>
+
+        <script>
+            var x=document.getElementById('d1')
+            function getJob(){
+                axios.get("https://jsonplaceholder.typicode.com/posts").then(function(res){
+                    var jobs=res.data;
+                    console.log(jobs)
+                    function genUi(z){
+                    x.innerHTML=""
+                    jobs.forEach(function(job){
+                        
+                        var y=document.createElement('li')
+                        y.innerHTML=job.userId;
+                        x.appendChild(y)
+            
+
+                        var z=document.createElement('div')
+                        z.innerHTML=job.id;
+                        y.appendChild(z)
+
+                        var w=document.createElement('div')
+                        w.innerHTML=job.title
+                        y.appendChild(w)
+                        
+                        // var v=document.createElement('img')
+                        // v.src=product.image
+                        // y.appendChild(v)
+                        // v.style.width="200px";
+                        // v.style.height="100px"
+                        // v.style.boxShadow="50%"
+                })
+            }
+            genUi();
+                })
+            }
+            function asc(){
+                axios.get("https://jsonplaceholder.typicode.com/posts").then(function(res){
+                    var jobs=res.data
+                    jobs.sort(function(a,b){
+                       if(a.id<b.id){
+                        return -1
+                       }
+                       if(a.id>b.id){
+                        return 1
+                       }
+                       return 0
+                    })
+                    x.innerHTML=""
+                    jobs.forEach(function(job){
+                        var x=document.getElementById('d1')
+                        var y=document.createElement('li')
+                        y.innerHTML=job.userId
+                        x.appendChild(y)
+                        
+                        var z=document.createElement('div')
+                        z.innerHTML=job.id
+                        y.appendChild(z)
+
+                        var w=document.createElement('div')
+                        w.innerHTML=job.title
+                        y.appendChild(w)
+                        
+                        // var v=document.createElement('img')
+                        // v.src=product.image
+                        // y.appendChild(v)
+                        // v.style.width="200px";
+                        // v.style.height="100px"
+                        // v.style.boxShadow="20%"
+                })
+                })
+            }
+            function des(){
+                axios.get("https://jsonplaceholder.typicode.com/posts").then(function(res){
+                    var jobs=res.data
+                    jobs.sort(function(a,b){
+                       if(a.id>b.id){
+                        return -1
+                       }
+                       if(a.id<b.id){
+                        return 1
+                       }
+                       return 0
+                    })
+                    x.innerHTML=""
+                    jobs.forEach(function(job){
+                        var x=document.getElementById('d1')
+                        var y=document.createElement('li')
+                        y.innerHTML=job.userId
+                        x.appendChild(y)
+                        
+                        var z=document.createElement('div')
+                        z.innerHTML=job.id
+                        y.appendChild(z)
+
+                        var w=document.createElement('div')
+                        w.innerHTML=job.title
+                        y.appendChild(w)
+                        
+                        // var v=document.createElement('img')
+                        // v.src=product.image
+                        // y.appendChild(v)
+                        // v.style.width="200px";
+                        // v.style.height="100px"
+                        // v.style.boxShadow="20%"
+                })
+                })
+            }
+        </script>
+    </body>
+</html>

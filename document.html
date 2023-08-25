@@ -1,0 +1,213 @@
+<html>
+
+<body id="ad">
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+    <div id="d4">
+        <ol id="d5"> 
+            <ol id="d6"></ol>
+        </ol>
+    </div>
+    <h1>Hello World </h1>
+    <h1 class="a">Hello</h1>
+    <h2 class="a">Edupoly</h2>
+    
+    <ul>
+        <li>Apple</li>
+        <li>Mango</li>
+        <li>Banana</li>
+    </ul>
+    <ul id="dd"></ul>
+    <ul id="de"></ul>
+    <h1>Hello</h1>
+    <p>Edupoly</p>
+    <p>Training</p>
+    <p>Something</p>
+    <script>
+        // 1 Print the text inside the h1 element in the console.
+        var x = document.getElementsByTagName("h1");
+        console.log(x[0].innerHTML)
+        // Print the data type of the text inside the h1.
+        var z = document.getElementsByTagName("h1");
+        console.log(typeof(z[0].innerHTML))
+        // Print the text inside the h1 in uppercase in the console.
+        console.log(x[0].innerHTML.toUpperCase())
+        // Change the text of the h1 to "Welcome to Edupoly"
+        x[0].innerHTML = "Welcome to Edupoly";
+        console.log(x[0].innerHTML)
+        // 2 Print the texts inside the h1 and h2 elements in the console.
+        var y = document.getElementsByClassName('a');
+        for(i=0;i<=y.length-1;i++){
+            console.log(y[i].innerHTML)
+        }
+        // 3 Store the texts of each li element in an array.
+        var ar=[];
+        var s=document.getElementsByTagName('li')
+        for(i=0;i<=s.length-1;i++){
+                ar.push(s[i].innerHTML);
+        }
+        console.log(ar);
+        // 4 Print the text inside the first paragraph element in the console.
+        var s=document.getElementsByTagName('p');
+        console.log(s[0].innerHTML)
+        // 5 Create one h1 element and put some text into it.
+        var element=document.createElement('h1');
+        element.innerHTML="Hello DOM Model"
+        var s=document.getElementById('ad')
+        s.appendChild(element);
+        console.log(element)
+        // 6 Create one h1 element,put some text into it and apply red font color to it.
+        var element=document.createElement('h1');
+        element.innerHTML="Hello DOM Model"
+        var s=document.getElementById('ad')
+        s.appendChild(element);
+        console.log(element)
+        element.style.color="red"
+        // 7 Take an array of names and create a list from it.
+        var names=["hello","edupoly","hi","hlo"];
+        names.forEach(function(x){
+            var s=document.createElement("li")
+            s.innerHTML=x;
+            var y=document.getElementById("dd")
+            y.appendChild(s)
+        })
+        // 8 Take an array of numbers and create a list from it.
+        var num=[1,2,23,5,45,76];
+        num.forEach(function(x){
+            var s=document.createElement("li")
+            s.innerHTML=x;
+            var y=document.getElementById("de")
+            y.appendChild(s)
+        })
+        // 8
+        var d1=document.getElementById("d1");
+        var ul=document.createElement("ul");
+        var li=document.createElement("li");
+        ul.appendChild(li)
+        d1.appendChild(ul)
+        // 9 Generate List Elements using document object for the given Array of Objects
+        var d2=document.getElementById("d2");
+        var a=document.createElement("table");
+        a.style.border="1px solid"
+        d2.appendChild(a);
+        var b=document.createElement("tr");
+        b.style.border="1px solid"
+        a.appendChild(b);
+        var c=document.createElement("th");
+        c.style.border="1px solid"
+        c.innerHTML="Name";
+        b.appendChild(c);
+        var d=document.createElement("th");
+        d.style.border="1px solid"
+        d.innerHTML="Age";
+        b.appendChild(d);
+        var e=document.createElement("th");
+        e.style.border="1px solid"
+        e.innerHTML="Gender";
+        b.appendChild(e);
+        var j=document.createElement("tr");
+        j.style.border="1px solid"
+        a.appendChild(j);
+        var h=document.createElement("td");
+        h.style.border="1px solid"
+        j.appendChild(h);
+        h.innerHTML="Reshma";
+        var i=document.createElement("td");
+        i.style.border="1px solid"
+        j.appendChild(i);
+        i.innerHTML="22";
+        var k=document.createElement("td");
+        k.style.border="1px solid"
+        j.appendChild(k);
+        k.innerHTML="Nellore";
+        var l=document.createElement("tr");
+        l.style.border="1px solid"
+        a.appendChild(l);
+        var m=document.createElement("td");
+        m.style.border="1px solid"
+        l.appendChild(m);
+        m.innerHTML="Bharathi";
+        var n=document.createElement("td");
+        n.style.border="1px solid"
+        l.appendChild(n);
+        n.innerHTML="22";
+        var o=document.createElement("td");
+        o.style.border="1px solid"
+        l.appendChild(o);
+        o.innerHTML="Hyd";
+        var z=document.getElementById("d2");
+        z.appendChild(a);
+        // 9 Generate List Elements using document object for the given Array of Objects
+        // var d3=document.getElementById("d3");
+        // var x=document.createElement("table");
+        // a.style.border="1px solid"
+        // var ar=[{
+        //     "Names":"Reshma","Age":22,"City":"Nellore"
+        // },
+        // {
+        //     "Names":"harshi","Age":22,"City":"Nlr"
+        // },
+        // {
+        //     "Names":"Bhar","Age":22,"City":"Hyd"
+        // },
+        // {
+        //     "Names":"Divya","Age":22,"City":"Hyd"
+        // }]
+        // var 
+        // ar.forEach(function(value){
+        //     var a=document.createElement("tr")
+        //     x.appendChild(a);
+        //     a.style.border="1px solid"
+        //     var b=document.createElement("td");
+        //     a.appendChild(a);
+        //     b.style.border="1px solid"
+        //     b.innerHTML="Reshma";
+        //     b.innerHTML=value.Name;
+        //     var c=document.createElement("td");
+        //     b.appendChild(c);
+        //     c.style.border="1px solid"
+        //     c.innerHTML=22;
+        //     c.innerHTML=value.Age;
+        //     var d=document.createElement("td");
+        //     b.appendChild(d);
+        //     d.style.border="1px solid"
+        //     d.innerHTML="Nellore";
+        //     d.innerHTML=value.city;
+        // })
+        // 7
+        var students = [		
+                                    {
+                                        "firstname": "praveen",
+                                        "age": 36,
+                                        "subjects":['angular','nodejs','reactjs','java']
+                                    }, 
+                                    {
+                                        "firstname": "srikanth",
+                                        "age": 32,
+                                        "subjects":['react','mongodb']
+                                    }, 
+                                    {
+                                        "firstname": "pradeep",
+                                        "age": 21,
+                                        "subjects":['express','mongoose','python']
+                                    }
+                            ]
+        var d4=document.getElementById("d4")
+        d4.style.border="1px solid"
+        var a=document.getElementById("d5")
+        var b=document.getElementById("d6")
+        students.forEach(function(value){
+            var c=document.createElement("li")
+            c.innerHTML=value.firstname;
+            a.appendChild(c)
+            d4.appendChild(a)
+        })
+        students.forEach(function(value){
+            var d=document.createElement("li")
+            d.innerHTML=value.subjects
+            b.appendChild(a)
+        })
+    </script>
+</body>
+</html>

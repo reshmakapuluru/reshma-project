@@ -1,0 +1,90 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        
+        <!-- 15 -->
+        <!-- <h1 style="color:red">Add Students</h1>
+        <input type="text" id="d6">
+        <button onclick="xyz(event)">ADD Student</button>
+        <div>
+            <ul id="d7"></ul>
+        </div> -->
+        <!-- 16 -->
+        <div style="height:40%;border:1px solid;width:40%" id="d1">
+        <img src="" id="d2" onclick="dfg(event)" style="height:100%;width:100%"></div><br><br>
+        <!-- 18 -->
+        <div id="d3"> </div><br>
+        <button onclick="abc()">red</button>
+        <button onclick="def()">green</button>
+        <button onclick="ghi()">blue</button>
+        <button onclick="qwe()">reset</button><br><br>
+        <!--  -->
+        <input type="text" id="fg">
+        <button onclick="dfh(event)">Add student</button>
+        <ul id="ll">
+
+        </ul>
+        <script>
+            
+            // 15
+            // function xyz(e){
+            //     var e=document.getElementById('d6')
+            //     var w=document.getElementById('d7')
+            //     var y=document.createElement('li')
+            //     y.innerHTML=e.value;
+            //     w.appendChild(y)
+            // }
+            // 15
+            var l=document.getElementById('ll')
+            var g=document.getElementById('fg')
+            var i=0
+            var ar=[]
+            function dfh(e){
+                ar[i]=g.value
+                i++
+                l.innerHTML=""
+                ar.forEach(function(value){
+                var k=document.createElement('li')
+                k.innerHTML=value
+                l.appendChild(k)
+            })
+           
+         }
+            // 16
+            var t=document.getElementById('d1')
+            var u=document.querySelector("#d2")
+            var ar=['https://thehappypuppysite.com/wp-content/uploads/2017/12/puppy9.jpg','https://i.pinimg.com/originals/26/b2/85/26b2859ad4385f64db73f7d8cacf0340.jpg','https://upload.wikimedia.org/wikipedia/commons/b/b4/Golden_Retriever_puppy_standing.jpg']
+            var i=0;
+            function dfg(e){
+                if(i==ar.length-1){
+                    i=0;
+                    u.src=ar[i]
+                }
+                else{
+                    i++;
+                    u.src=ar[i]
+                }
+                
+            }
+            // 18
+            var d1=document.getElementById("d3");
+            d1.style.border="1px solid";
+            d1.style.width="13%"
+            d1.style.height="30%"
+            function abc(){
+                d3.style.backgroundColor="red";
+            }
+            function def(){
+                d3.style.backgroundColor="green";
+            }
+            function ghi(){
+                d3.style.backgroundColor="blue";
+            }
+            function qwe(){
+                d3.style.backgroundColor="white";
+            }
+        </script>
+    </body>
+</html>

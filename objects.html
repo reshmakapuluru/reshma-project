@@ -44,12 +44,103 @@
             var total=0;
             var per;
             for(var k in marks){
-                for(marks[k] in marks){
+                if(marks[k]<=100){
                     total=total+marks[k];
+                    sum=total/500*100;
                 }
-                total=total/5;
-                console.log(total);
+                console.log(sum);
             }
+            for(var k in marks){
+                if(marks[k]>35){
+                    console.log(k);
+                }
+            }
+            for(var k in marks){
+                if(marks[k]>=35){
+                    console.log("pass")
+                }
+                else{
+                    console.log("fail") 
+                }
+            }
+            for(var k in marks){
+                if(marks[k]>=35){
+                    console.log(k)
+                }
+            }
+            var count=0;
+            for(var k in marks){
+                if(marks[k]>35){
+                    count=count+1;
+                }
+            }
+            console.log(count)
+            for(var k in marks){
+                if(marks[k]<35){
+                    console.log(k)
+                }
+            }
+            var count=0;
+            for(var k in marks){
+                if(marks[k]<35){
+                    count=count+1;
+                }
+            }
+            console.log(count)
+            for(var k in marks){
+                if(marks[k]<35){
+                    console.log(k)
+                }
+            }
+            if(marks.maths<marks.science){
+                console.log("maths")
+            }
+            else{
+                console.log("science")
+            }
+            for(var k in marks){
+                if(marks[k]>70){
+                    console.log(k)
+                }
+            }
+
+            count=0;
+            for(var k in marks){
+                if(marks[k]<35){
+                    count=count+1;
+                }
+            }
+            if(count>0){
+                console.log("Fail")
+            }
+            else{
+                console.log("Passed in all subjects")
+            }
+
+            var k=prompt();
+            if(marks[k]>35){
+                console.log("pass")
+                console.log(marks[k])
+            }
+            else{
+                console.log("fail")
+                console.log(marks[k])
+            }
+            min=Infinity;
+            max=+Infinity;
+            var minsub;
+            var obj={
+                "maths":45,
+                "science":55
+            }
+            for(k in obj){
+                if(obj[k]<min){
+                    min=obj[k];
+                    minsub=k;
+                }
+            }
+            console.log(min,minsub)
+            
         </script>
     </body>
 </html>

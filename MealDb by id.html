@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+        crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <button onclick="abc()">click me</button>
+        <input type="text"id=dd>
+        <div id="main"></div>
+        <script>
+            var inp = document.getElementById('dd')
+            var main = document.getElementById('main')
+            var url="https://www.themealdb.com/api/json/v1/1/lookup.php?i="
+            function abc(){
+                axios.get(`${url}${inp.value}`).then(function (res){
+                    var ingredients= res.data
+                    console.dir(ingredients)
+
+                    ingredients.meals.forEach(function(a,b){
+                        var ul=document.getElementById('ul')
+                        // var newli=document.getElementById('li')
+                        // newli.innerHTML=a.idMeal
+                        // ul.appendChild(newli)
+
+                        var image=document.createElement('img')
+                        //image.setAttribute("class","cardBody w-50 mx-auto mt-3")
+                        image.src=a.strMealThumb
+                        //image.style.width='fit-content'
+                        ul.appendChild(image)
+
+                        var category=document.createElement('div')
+                        category.setAttribute("class","cardBody mx-auto")
+                        category.innerHTML="<b>StrCategory:</b>"+a.strCategory
+                        category.style.width="fit-content"
+                        ul.appendChild(category)
+
+                    })                
+                })
+            }
+        
+        </script>
+    </body>
+</html>

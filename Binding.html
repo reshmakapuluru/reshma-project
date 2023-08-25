@@ -1,0 +1,52 @@
+<html>
+    <head></head>
+    <body>
+        <!-- <ul id="d1">
+
+        </ul> -->
+        <input type="text" onblur="abc()">
+        <ul id="d1"> </ul>
+        <script>
+            // var ar=['resh','bhar','bujji','siri','harshi'];
+            // var y=document.getElementById('d1')
+            // function genUI(){
+            //     y.innerHTML='';
+            //     ar.forEach(function(a,i){
+            //         var x=document.createElement('li')
+            //         x.innerHTML=a
+            //         var del=document.createElement('Button')
+            //         del.innerHTML='Delete'
+            //         x.appendChild(del)
+            //         x.onclick=function(){
+            //             console.log(ar.splice(i,1),genUI())
+            //         }
+            //         y.appendChild(x)
+            //     })  
+            // }
+            // genUI();
+            var ar=[]
+            var x=document.getElementById('d2')
+            var y=document.getElementById('d1')
+            function abc(){
+                ar.push(x.value)
+            
+            function genUI(){
+                y.innerHTML='';
+                ar.forEach(function(a,i){
+                    var x=document.createElement('li')
+                    x.innerHTML=a
+                    var del=document.createElement('Button')
+                    del.innerHTML='Delete'
+                    x.appendChild(del)
+                    x.onclick=function(){
+                        ar.splice(i,1)
+                        genUI()
+                    }
+                    y.appendChild(x)
+                })  
+            }
+            }
+            genUI();
+        </script>
+    </body>
+</html>

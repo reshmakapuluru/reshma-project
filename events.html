@@ -1,0 +1,166 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <!-- 1 -->
+        <button onclick="asd()">Add Text</button><br>
+        <br>
+        <div id="d1"> </div>
+        <!-- 2 -->
+        <div id="d2"> </div><br>
+        <button onclick="abc()">red</button>
+        <button onclick="def()">green</button>
+        <button onclick="ghi()">blue</button>
+        <button onclick="qwe()">pink</button><br><br>
+        <!-- 3 -->
+        <button id="dd" onclick="zki()">white</button>
+        <!-- 4 -->
+        <h1 onclick="dfg(event)">Click me</h1>
+        <!-- 5 -->
+        <button onclick="zxe()">Show me</button><br>
+        <div id="d3"></div><br>
+        <!-- 6 -->
+        <div id="d4">
+            <button onclick="a(event)">Show</button><br>
+        </div><br>
+        <!-- 7 -->
+        <button onmouseover="alert('hi')">click over</button><br><br>
+        <!-- 8 -->
+        <button onclick="cb()">Decrement</button>
+        <span id="d5">0</span>
+        <button onclick="bc()">Increment</button><br>
+        <!-- 9 -->
+        <div id="d6">
+            <button onclick="zz()">Toggle</button>
+        </div>
+        <script>
+            // 1
+            function asd(){
+                var x=document.createElement('h1')
+                x.innerHTML="Welcome to different world";
+                var y=document.getElementById("d1");
+                y.appendChild(x)
+            }
+            // 2
+            var d1=document.getElementById("d2");
+            d1.style.border="1px solid";
+            d1.style.width="13%"
+            d1.style.height="30%"
+            function abc(){
+                d2.style.backgroundColor="red";
+            }
+            function def(){
+                d2.style.backgroundColor="green";
+            }
+            function ghi(){
+                d2.style.backgroundColor="blue";
+            }
+            function qwe(){
+                d2.style.backgroundColor="lightpink";
+            }
+            // 3
+            var y=document.getElementById("dd")
+            y.style.backgroundColor="white"
+    
+            function zki(){
+                if(y.style.backgroundColor==="white"){
+                    y.innerHTML="green"
+                    y.style.backgroundColor="green"
+                    y.style.color="white"
+                }
+                else{
+                    y.innerHTML="white"
+                    y.style.backgroundColor="white"
+                    y.style.color="black"
+
+                }
+            }
+            // 4 
+            function dfg(e){
+                e.target.innerHTML='';
+                e.target.innerHTML='Oops'
+            }
+            // 5
+            function zxe(){
+            var d3=document.getElementById("d3");
+            var a=document.createElement("table");
+            a.style.border="1px solid"
+            d3.appendChild(a);
+            var b=document.createElement("tr");
+            b.style.border="1px solid"
+            a.appendChild(b);
+            var c=document.createElement("th");
+            c.style.border="1px solid"
+            c.innerHTML="Name";
+            b.appendChild(c);
+            var d=document.createElement("th");
+            d.style.border="1px solid"
+            d.innerHTML="Age";
+            b.appendChild(d);
+            var e=document.createElement("th");
+            e.style.border="1px solid"
+            e.innerHTML="Gender";
+            b.appendChild(e);
+            var j=document.createElement("tr");
+            j.style.border="1px solid"
+            a.appendChild(j);
+            var h=document.createElement("td");
+            h.style.border="1px solid"
+            j.appendChild(h);
+            h.innerHTML="Reshma";
+            var i=document.createElement("td");
+            i.style.border="1px solid"
+            j.appendChild(i);
+            i.innerHTML="22";
+            var k=document.createElement("td");
+            k.style.border="1px solid"
+            j.appendChild(k);
+            k.innerHTML="Nellore";
+            var l=document.createElement("tr");
+            l.style.border="1px solid"
+            a.appendChild(l);
+            var m=document.createElement("td");
+            m.style.border="1px solid"
+            l.appendChild(m);
+            m.innerHTML="Bharathi";
+            var n=document.createElement("td");
+            n.style.border="1px solid"
+            l.appendChild(n);
+            n.innerHTML="22";
+            var o=document.createElement("td");
+            o.style.border="1px solid"
+            l.appendChild(o);
+            o.innerHTML="Hyd";
+            var z=document.getElementById("d3");
+            z.appendChild(a);
+            }
+            // 6
+            var x=document.getElementById('d5')
+            function a(e){
+                e.target.innerHTML='';
+                var a=document.getElementById('d4');
+                a.innerHTML="oops"
+            }
+            // 8
+            count=0;
+            var x=document.getElementById('d5')
+            function cb(){
+                count--;
+                x.innerHTML=count;
+            }
+    
+            function bc(){
+                count++;
+                x.innerHTML=count;
+            }
+            // 9
+            var z=document.getElementById('d6')
+            function zz(){
+                if(z=='Toggle'){
+                    return true
+                }
+            }
+        </script>
+    </body>
+</html>

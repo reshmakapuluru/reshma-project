@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    </head>
+    <body>
+        <div style="height:40%;border:1px solid;width:40%" id="d1">
+        <img src="" id="d2" style="height:100%;width:100%"></div>
+        <button onclick="prev()">Prev</button>
+        <button onclick="next()">next</button>
+        <br><br>
+        <!-- 12 -->
+        <img onclick="abc(event)" src="https://2.bp.blogspot.com/-aZNrUOQZ_b0/T5prDvQfDcI/AAAAAAAAC7I/kocCDHxQycw/s1600/HDHD.blogspot.com.+%252814%2529.jpg" style="height:20%">
+        <img onclick="abc(event)" src="https://tse4.mm.bing.net/th?id=OIP.SYVOsT6OjixJKyYsY6vKlgHaE6&pid=Api&P=0&h=180" style="height:20%">
+        <img onclick="abc(event)" src="https://tse1.mm.bing.net/th?id=OIP.rDogBzXvl9hRztEZy_pRRgHaEo&pid=Api&P=0&h=180" style="height:20%"><br><br>
+        <img src="" id="d3">
+        <!-- 13 -->
+        <i class="bi" onclick="abc(event)" id="0"></i>
+        <i class="bi" onclick="abc(event)" id="1"></i>
+        <i class="bi" onclick="abc(event)" id="2"></i>
+        <i class="bi" onclick="abc(event)" id="3"></i>
+        <i class="bi" onclick="abc(event)" id="4"></i>
+        <script>
+            // 12
+            function abc(e){
+                var z=document.getElementById('d3')
+                z.src=e.target.src;
+                z.style.height="50%"
+                z.style.width="40%"
+            }
+            // 13
+            var x=document.getElementsByClassName('bi')
+            for( var i=0;i<=x.length;i++){
+            x[i].classList.add('bi-star')
+            }
+            function abc(e){
+               for( var j=0;j<=x.length-1;j++){
+                   if(j<=e.target.id){
+                   x[j].classList.remove('bi-star')
+                   x[j].classList.add('bi-star-fill')
+               }
+               else{
+                   x[j].classList.remove('bi-star-fill')
+                   x[j].classList.add('bi-star')
+               }
+                }
+            }
+            // 17
+            
+            var y=document.getElementById('d1')
+            var x=document.querySelector('#d2')
+            
+            var ar=['https://www.suntiros.com/wp-content/uploads/2017/01/Allu-Arjun-Body-Images-HD.jpg','https://1.bp.blogspot.com/-OFaJNoI29RA/XUMfaaHsXZI/AAAAAAAAdLE/vrQZDI9TkE86H-LMNF12h6KGcw8oFEL7gCLcBGAs/s1600/allu_arjun_signs_yet_another_brand_endorsement_deal_bunny_as_face_of_frooti.jpg','http://wallpapercave.com/wp/yiN28Ah.jpg']
+            var i=0;            
+            function prev(){
+                if(i===0){
+                    i=ar.length-1;
+                    x.src=ar[i]
+                }
+                else{
+                    i--;
+                    x.src=ar[i]
+                }
+            }
+            function next(){
+                if(i==ar.length-1){
+                    i=0;
+                    x.src=ar[i]
+                }
+                else{
+                    i++;
+                    x.src=ar[i]
+                }
+            }
+            //
+            var x=document.getElementsByClassName('bi')
+            for( var i=0;i<=x.length;i++){
+            x[i].classList.add('bi-star')
+            }
+            function abc(e){
+                for( var j=0;j<=x.length-1;j++){
+                   if(j<=e.target.id){
+                        x[j].classList.remove('bi-star')
+                        x[j].classList.add('bi-star-fill')
+                   }
+                   else{
+                        x[j].classList.remove('bi-star-fill')
+                        x[j].classList.add('bi-star')
+                   }
+                }
+            }
+        </script>
+    </body>
+</html>

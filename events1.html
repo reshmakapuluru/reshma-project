@@ -1,0 +1,160 @@
+<html>
+    <head></head>
+    <body>
+        <div id="dd" onclick="v()">
+
+        </div><br>
+        <button onclick="b()" id="df">Toggle</button>
+        <span id="ff"></span><br><br>
+        <button onclick="a()" id="gf">On</button><br><br>
+        <button onclick="d()">Like</button>
+        <span id="b"></span>
+        <button onclick="f()">Dislike</button>
+        <span id="d"></span><br><br>
+        <div id="resh">
+        </div>
+        <button onclick=" k()">Toggle</button><br><br>
+        <div id="d1"></div>
+        <button id="mm" onclick="as()">On</button>
+        <button id="nn" onclick="az()">Off</button>
+        <div>
+            <img id="p" onclick="ab()" src="https://tse4.explicit.bing.net/th?id=OIP.ahSyTjZk3CLutIp6mieRsQHaE8&pid=Api&P=0&h=180">
+            <img id="q" onclick="ba()" src="https://tse4.explicit.bing.net/th?id=OIP.SI8GqYMBI28Duky_eyXMsQHaE7&pid=Api&P=0&h=180">
+        </div>
+    </body>
+    <script>
+        //4
+        var x=document.getElementById('dd')
+        x.style.border='1px solid black'
+        x.style.width='10%'
+        x.style.height='10%'
+        x.style.backgroundColor='white'
+        function v(){
+            if(x.style.backgroundColor==='white'){
+                x.style.backgroundColor='green'
+            }else if(x.style.backgroundColor==='green'){
+                x.style.backgroundColor='blue'
+            }
+            else if(x.style.backgroundColor==='blue'){
+                x.style.backgroundColor='pink'
+            }
+            else if(x.style.backgroundColor==='pink'){
+                x.style.backgroundColor='grey'
+            }
+            else if(x.style.backgroundColor==='grey'){
+                x.style.backgroundColor='yellow'
+            }
+            else{
+                x.style.backgroundColor='red'
+            }
+            
+
+        }
+        //5
+        var y=document.getElementById('df')
+        y.style.backgroundColor='yellow'
+        count=true
+        
+        function b(){
+            var z=document.getElementById('ff')
+            z.innerHTML=count
+            if(z.innerHTML==='true'){
+                count=false;
+                
+            }
+            else{
+                count=true;
+            }
+        }
+        //6
+        function a(){
+            var y=document.getElementById('gf')
+           
+            if(y.innerHTML==='On'){
+                y.innerHTML='off'
+            }
+            else[
+                y.innerHTML='On'
+            ]
+            
+        }
+        //7
+        count=0
+        sum=0
+        var n=document.getElementById('b')
+        n.innerHTML=count
+        var m=document.getElementById('d')
+        m.innerHTML=sum
+        function d(){
+           count++
+           n.innerHTML=count
+           n.style.backgroundColor='light green'
+        }
+        
+        function f(){
+           sum++
+           m.innerHTML=sum
+        }
+        //9
+        var r=document.getElementById('resh')
+        r.style.border='1px solid black'
+        r.style.width='10%'
+        r.style.height='10%'
+        r.style.backgroundColor='white'
+        function k(){
+           
+            if(r.style.backgroundColor==='white'){
+                r.style.backgroundColor='yellow'
+            }
+            else if(r.style.backgroundColor==='yellow'){
+                r.style.backgroundColor='white'
+            }
+        }
+        //8
+        var c=document.getElementById("d1")
+        c.style.border='1px solid black'
+        c.style.width='10%'
+        c.style.height='10%'
+        var j=document.getElementById('mm')
+        j.style.backgroundColor='white'
+        var k=document.getElementById('nn')
+        k.style.backgroundColor='white'
+        function as(){
+            j.style.backgroundColor='red'
+            if(j.style.backgroundColor==='red'){
+                k.style.backgroundColor='white'
+                c.style.backgroundColor='yellow'
+            }
+        }function az(){
+            k.style.backgroundColor='red'
+            if(k.style.backgroundColor==='red'){
+                j.style.backgroundColor='white'
+                c.style.backgroundColor='white'
+            }
+        }
+        // 10
+        var d=document.getElementById('p')
+        var g=document.getElementById('q')
+        function ab(){
+            if(d.style.display=='none'){
+                g.style.display='block'
+            }
+        }
+        function ba(){
+            if(g.style.display='none'){
+                d.style.display='block'
+            }
+        }
+        // 11
+        var a=[]
+            var b=a.forEach(function(value){
+                var x=document.createElement('li')
+                x.innerHTML=value
+                var y=document.getElementById('dl')
+                y.append(x)
+            });
+        // 12
+
+
+    </script>
+</html>

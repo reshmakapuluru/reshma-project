@@ -1,0 +1,38 @@
+ <html>
+    <head>
+
+    </head>
+    <body>
+        <input type="text" id="fg">
+        <button onclick="dfh(event)">Add student</button>
+        <ul id="ll"></ul>
+        <script>
+            var l=document.getElementById('ll')
+            var g=document.getElementById('fg')
+            var i=0
+            var ar=['apple','banana','mango','ant','dog']
+            ar.forEach(function(value){
+                var k=document.createElement('li')
+                k.innerHTML=value;
+                l.appendChild(k)
+            })
+            function dfh(e){
+                l.innerHTML=""
+                ar.forEach(function(value){
+                    if(g.value===value.slice(0,1)){
+                        var k=document.createElement('li')
+                        k.innerHTML=value;
+                        l.appendChild(k);
+                    }
+                    else{
+                        var k=document.createElement('li')
+                        k.innerHTML=value;
+                        l.appendChild(k)
+                    }
+                })
+           
+         }
+        </script>
+    </body>
+</html>
+

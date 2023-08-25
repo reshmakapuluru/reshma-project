@@ -1,0 +1,159 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    </head>
+    <body>
+        <button onclick="tbs()">Table</button>
+        <!-- <input type="text"  onkeyup="abc()" id="dd"> -->
+        <button onclick="asc()">Ascending</button>
+        <button onclick="dsc()">Descending</button>
+        <table id="d1" style="border: 1px solid;">
+            <thead id="th"></thead>
+            <tfoot id="tf"></tfoot>
+        </table>
+        <script>
+            var x=document.getElementById('d1')
+            var t=document.getElementById('dd')
+            var tfoot=document.getElementById('tf')
+            var thead=document.getElementById('th')
+            var rt=document.createElement('tr')
+            var th=document.createElement('th')
+            th.innerHTML='Name'
+            th.style.border='1px solid black'
+            rt.appendChild(th)
+            var et=document.createElement('th')
+            et.innerHTML='Username'
+            et.style.border='1px solid black'
+            rt.appendChild(et)
+            var ft=document.createElement('th')
+            ft.innerHTML="Email"
+            ft.style.border='1px solid black'
+            rt.appendChild(ft)
+            // var gt=document.createElement('th')
+            // gt.innerHTML="images"
+            // gt.style.border='1px solid black'
+            // rt.appendChild(gt)
+            x.appendChild(rt)
+
+            // function abc(){
+            //     axios.get("https://fakestoreapi.com/products").then(function(res){
+            //         var products=res.data;
+            //     var n=products.filter(function(a,i){
+            //         return(a.title.startsWith(a.value))  
+            //     }) 
+            //     tbs(n);
+            // })
+                
+            // }
+
+
+
+            function tbs(){
+                axios.get("https://jsonplaceholder.typicode.com/users").then(function(res){
+                    var posts=res.data;
+                    posts.forEach(function(value,index){
+                    var tr=document.createElement('tr')
+                    var td=document.createElement('td')
+                    td.innerHTML=value.name;
+                    td.style.border='1px solid black'
+                    tr.appendChild(td)
+                    var te=document.createElement('td')
+                    te.innerHTML=value.username;
+                    te.style.border='1px solid black'
+                    tr.appendChild(te)
+                    var tf=document.createElement('td')
+                    tf.innerHTML=value.email;
+                    tf.style.border='1px solid black'
+                    tr.appendChild(tf)
+                    // var tg=document.createElement('img')
+                    // tg.src=value.image
+                    // tg.style.border='1px solid black'
+                    // tg.style.width="100px"
+                    // tr.appendChild(tg)
+
+                    tfoot.appendChild(tr)
+                
+                  })
+                })
+            }
+
+            function asc(){
+                axios.get("https://jsonplaceholder.typicode.com/users").then(function(res){
+                    var posts=res.data;
+                    posts.sort(function(a,b){
+                       if(a.name<b.name){
+                        return -1
+                       }
+                       if(a.name>b.name){
+                        return 1
+                       }
+                       return 0
+                    })
+                    x.innerHTML='';
+                    posts.forEach(function(value,index){
+                    var tr=document.createElement('tr')
+                    var td=document.createElement('td')
+                    td.innerHTML=value.name
+                    td.style.border='1px solid black'
+                    tr.appendChild(td)
+                    var te=document.createElement('td')
+                    te.innerHTML=value.username
+                    te.style.border='1px solid black'
+                    tr.appendChild(te)
+                    var tf=document.createElement('td')
+                    tf.innerHTML=value.email
+                    tf.style.border='1px solid black'
+                    tr.appendChild(tf)
+                    // var tg=document.createElement('img')
+                    // tg.src=value.image
+                    // tg.style.border='1px solid black'
+                    // tg.style.width="100px"
+                    // tr.appendChild(tg)
+
+                    tfoot.appendChild(tr)
+                
+                  })
+                })
+            }
+
+            function dsc(){
+                axios.get("https://jsonplaceholder.typicode.com/posts").then(function(res){
+                    var posts=res.data;
+                    posts.sort(function(a,b){
+                       if(a.name>b.name){
+                        return -1
+                       }
+                       if(a.name<b.name){
+                        return 1
+                       }
+                       return 0
+                    })
+                
+                    x.innerHTML=""
+                    posts.forEach(function(value,index){
+                    var tr=document.createElement('tr')
+                    var td=document.createElement('td')
+                    td.innerHTML=value.name
+                    td.style.border='1px solid black'
+                    tr.appendChild(td)
+                    var te=document.createElement('td')
+                    te.innerHTML=value.username
+                    te.style.border='1px solid black'
+                    tr.appendChild(te)
+                    var tf=document.createElement('td')
+                    tf.innerHTML=value.email;
+                    tf.style.border='1px solid black'
+                    tr.appendChild(tf)
+                    // var tg=document.createElement('img')
+                    // tg.src=value.image
+                    // tg.style.border='1px solid black'
+                    // tg.style.width="100px"
+                    // tr.appendChild(tg)
+
+                    tfoot.appendChild(tr)
+                  })
+                })
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,257 @@
+<!-- <html>
+    <head>
+        <body>
+            <button onclick="abc()">Descending order</button>
+            <button onclick="adc()">Ascending order</button>
+            <button onclick="ghc()">table</button>
+            <div id="d1"></div>
+            
+            <script>
+                var table=[{
+                Name:'praveen',Age:36,Gender:'Male',Salary:10000,City:'hyd'
+                },
+                {
+                Name:'srikanth',Age:32,Gender:'Male',Salary:10000,City:'hyd'
+                },
+                {
+                Name:'pradeep',Age:36,Gender:'Male',Salary:10000,City:'hyd'
+                },
+                {
+                Name:'mounika',Age:36,Gender:'Male',Salary:10000,City:'hyd'
+                },
+                {
+                Name:'nikhil',Age:36,Gender:'Male',Salary:10000,City:'hyd'
+                },
+                {
+                Name:'riya',Age:36,Gender:'Male',Salary:10000,City:'hyd'
+                },
+            ]
+            var d1=document.getElementById('d1')
+            var a=document.createElement('table')
+            a.style.border="1px solid black"
+
+
+            var xy=document.createElement('tr')
+            
+            var yz=document.createElement('th')
+            yz.style.border="1px solid black"
+            yz.innerHTML='Name'
+            var zy=document.createElement('th')
+            zy.style.border="1px solid black"
+            zy.innerHTML='Age'
+
+            var wx=document.createElement('th')
+            wx.style.border="1px solid black"
+            wx.innerHTML='Gender'
+
+            var fb=document.createElement('th')
+            fb.style.border="1px solid black"
+            fb.innerHTML='Salary'
+
+            var el=document.createElement('th')
+            el.style.border="1px solid black"
+            el.innerHTML='City'
+            xy.appendChild(yz)
+            xy.appendChild(zy)
+            xy.appendChild(wx)
+            xy.appendChild(fb)
+            xy.appendChild(el)
+            a.appendChild(xy)
+            d1.appendChild(a)
+            function ghc(){
+                table.forEach(function(value){
+                var x=document.createElement('tr')
+                    
+                var y=document.createElement('td')
+                y.style.border="1px solid black"
+                y.innerHTML=value.Name
+                var z=document.createElement('td')
+                z.style.border="1px solid black"
+                z.innerHTML=value.Age
+
+                var w=document.createElement('td')
+                w.style.border="1px solid black"
+                w.innerHTML=value.Gender
+
+                var f=document.createElement('td')
+                f.style.border="1px solid black"
+                f.innerHTML=value.Salary
+
+                var e=document.createElement('td')
+                e.style.border="1px solid black"
+                e.innerHTML=value.City
+                x.appendChild(y)
+                x.appendChild(z)
+                x.appendChild(w)
+                x.appendChild(f)
+                x.appendChild(e)
+                a.appendChild(x)
+                })
+            }
+            d1.appendChild(a)
+            function abc(){
+                table.sort(function(a,b){
+                    if(a.Name>b.Name){
+                        return -1;
+                    }
+                    if(a.Name<b.Name){
+                        return 1;
+                    }
+                    return 0;
+                })
+                ghc();
+            }
+            function adc(){
+                table.sort(function(a,b){
+                    if(a.Name<b.Name){
+                        return -1;
+                    }
+                    if(a.Name>b.Name){
+                        return 1;
+                    }
+                })
+                ghc();
+            }
+            
+            </script>
+        </body>
+    </head>
+</html> -->
+
+<html>
+    <head></head>
+    <body>
+
+<button onclick="m()">Table</button>
+
+<button onclick="As()">Ascending</button>
+<button onclick="Ds()">Descending</button>
+
+<div id="d1"></div>
+    </body>
+    <script>
+        var people = [
+                        {
+                        "firstname": "praveen",
+                        "lastname": "gubbala",
+                        "age": 36,
+                        "gender": "male",
+                        },
+                        {
+                        "firstname": "srikanth",
+                        "lastname": "gubbala",
+                        "age": 32,
+                        "gender": "male",
+                        },
+                        {
+                        "firstname": "pradeep",
+                        "lastname": "reddy",
+                        "age": 21,
+                        "gender": "male",
+                        },
+                        {
+                        "firstname": "mounika",
+                        "lastname": "mudiraj",
+                        "age": 20,
+                        "gender": "female",
+                        },
+                        {
+                        "firstname": "riya",
+                        "lastname": "bhadouria",
+                        "age": 14,
+                        "gender": "female",
+                        }
+                        ];
+
+
+        var t=document.createElement("table")
+        t.style.border="1px solid"
+        var o=document.createElement('thead')
+        var j=document.createElement('tfoot')
+        var x=document.createElement("tr")
+        var y=document.createElement("th")
+        y.style.border="1px solid"
+        y.innerHTML="Firstname"
+        var y1=document.createElement("th")
+        y1.style.border="1px solid"
+        y1.innerHTML="Lastname"
+        var y2=document.createElement("th")
+        y2.style.border="1px solid"
+        y2.innerHTML="Age"
+        var y3=document.createElement("th")
+        y3.style.border="1px solid"
+        y3.innerHTML="Gender"
+        x.appendChild(y)
+        x.appendChild(y1)
+        x.appendChild(y2)
+        x.appendChild(y3)
+        o.appendChild(x)
+        t.appendChild(x)
+        t.appendChild(o)
+        t.appendChild(j)
+
+function m(){
+    j.innerHTML=""
+people.forEach(function(values,index){
+    
+        var x1=document.createElement("tr")
+        var z=document.createElement("td")
+        z.style.border="1px solid"
+        z.innerHTML=values.firstname
+        var z1=document.createElement("td")
+        z1.style.border="1px solid"
+        z1.innerHTML=values.lastname
+        var z2=document.createElement("td")
+        z2.style.border="1px solid"
+        z2.innerHTML=values.age
+        var z3=document.createElement("td")
+        z3.style.border="1px solid"
+        z3.innerHTML=values.gender
+
+        x1.appendChild(z)
+        x1.appendChild(z1)
+        x1.appendChild(z2)
+        x1.appendChild(z3)
+        t.appendChild(x1)
+        j.appendChild(x1)
+
+        var d=document.getElementById("d1")
+        d.appendChild(t) 
+    
+})
+
+}
+function Ds(){
+    people.sort(function(a,b){
+        if(a.firstname>b.firstname){
+            return -1;
+        }
+        if(a.firstname<b.firstname){
+            return 1;
+        }
+        return 0
+    })
+   m()
+    
+}
+
+function As(){
+    people.sort(function(a,b){
+        if(a.firstname<b.firstname){
+            return -1;
+        }
+        if(a.firstname>b.firstname){
+            return 1;
+        }
+        return 0
+    })
+   m()
+    
+}
+
+
+
+
+
+    </script>
+</html>

@@ -1,0 +1,19 @@
+<html> 
+    <head><script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script></head>
+    <body>
+         <input type="text" id="d1">
+        <button onclick="meal()">Search</button>
+        <div id="main"></div>
+        <script>
+            var main=document.getElementById('main')
+            // var inp=document.getElementById('d1')
+            var url="https://www.themealdb.com/api/json/v1/1/list.php?i=list"
+            function meal(){
+                axios.get(`${url}`).then((res)=>{
+                    var meal=res.data
+                    console.log(meal)
+                })
+            }
+        </script>
+    </body>
+</html>

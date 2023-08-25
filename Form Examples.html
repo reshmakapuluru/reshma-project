@@ -1,0 +1,115 @@
+<!-- <html>
+    <head></head>
+    <body>
+        <div id="d4"></div>
+        <form onsubmit="event.preventDefault()">
+            Name:<input type="text" id="fn"><br><br>
+            Age:<input type="text" id="age"><br><br>
+            <b>Gender:</b>
+            <input type="radio" name="Gender" value="female" onchange="getGender(event)">:female
+            <input type="radio" name="Gender" value="male" onchange="getGender(event)">:male
+            <input type="radio" name="Gender" value="others" onchange="getGender(event)">:others
+            <br>
+            <br><br>
+            <button onclick="addstudent()" id="ff">Add student</button>
+        </form>
+        <div id="d1"></div><br><br>
+        <script>
+            var g=document.getElementById('ff')
+            var students=[]
+            var Gender;
+            function getGender(e){
+                Gender=e.target.value
+            }
+            var d1=document.getElementById('d1')
+            var a=document.createElement('table')
+            a.style.border="1px solid black"
+            var xy=document.createElement('tr')
+            var yz=document.createElement('th')
+            yz.style.border="1px solid black"
+            yz.innerHTML='Name'
+            var zy=document.createElement('th')
+            zy.style.border="1px solid black"
+            zy.innerHTML='Age'
+            var wx=document.createElement('th')
+            wx.style.border="1px solid black"
+            wx.innerHTML='Gender'
+            var vx=document.createElement('th')
+            vx.style.border="1px solid black"
+            vx.innerHTML='Action'
+                xy.appendChild(yz)
+                xy.appendChild(zy)
+                xy.appendChild(wx)
+                xy.appendChild(vx)
+                a.appendChild(xy)
+                d1.appendChild(a)
+            function addstudent(){
+                var newstudent={
+                   Name:"",
+                   Age:"",
+                   Gender:"",
+                }
+                newstudent.Name=document.getElementById('fn').value;
+                newstudent.Age=document.getElementById('age').value;
+                newstudent.Gender=Gender;
+                i=0;
+                students[i]=newstudent
+            
+            students.forEach(function(value){
+                d1.innerHTML=""
+                var x=document.createElement('tr')
+                 
+                var y=document.createElement('td')
+                y.style.border="1px solid black"
+                y.innerHTML=value.Name
+                 
+                var z=document.createElement('td')
+                z.style.border="1px solid black"
+                z.innerHTML=value.Age
+
+                var w=document.createElement('td')
+                w.style.border="1px solid black"
+                w.innerHTML=value.Gender
+
+                var v=document.createElement('td')
+                v.style.border="1px solid black"
+                 
+                var b=document.createElement('button')
+                b.innerHTML="Delete"
+                function GenUI(){
+                    b.onclick=function(){
+                        students.splice(i,1),GenUI();
+                    }
+                }GenUI();
+                v.appendChild(b)
+                x.appendChild(y)
+                x.appendChild(z)
+                x.appendChild(w)
+                x.appendChild(v)
+                a.appendChild(x)
+            })
+            d1.appendChild(a)
+            }
+        
+        </script>
+    </body>
+</html> -->
+<html>
+    <head>
+
+    </head>
+    <body>
+        Name:<input type="text">
+        Age:<input type="text">
+        <b>Gender:</b>
+        <input type="radio" name="Gender" value="female" onchange="getGender(event)">:female
+        <input type="radio" name="Gender" value="male" onchange="getGender(event)">:male
+        <input type="radio" name="Gender" value="others" onchange="getGender(event)">:others
+        <br>
+        <br><br>
+        <button onclick="student()" id="ff">Add student</button>
+    </body>
+    <script>
+        
+    </script>
+</html>

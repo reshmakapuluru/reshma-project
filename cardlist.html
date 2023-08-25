@@ -1,0 +1,69 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <input type="text" id="fg">
+        <button onclick="dfh(event)">Add student</button>
+        <ul id="ll"></ul>
+        <script>
+            var l=document.getElementById('ll')
+            var g=document.getElementById('fg')
+            var i=0
+            var ar=['apple','banana','mango','ant','dog']
+            ar.forEach(function(value){
+                var k=document.createElement('li')
+                k.innerHTML=value;
+                l.appendChild(k)
+            })
+            function dfh(e){
+                l.innerHTML=""
+                ar.forEach(function(value){
+                    if(g.value===value.slice(0,1)){
+                        var k=document.createElement('li')
+                        k.innerHTML=value;
+                        l.appendChild(k);
+                    }
+                    else{
+                        var k=document.createElement('li')
+                        k.innerHTML=value;
+                        l.appendChild(k)
+                    }
+                })
+           
+         }
+        </script>
+    </body>
+</html>
+
+<!-- <html>
+    <head></head>
+    <body>
+        <input type="text" onkeyup="abc()" id="ip">
+        <ul id="d1"></ul>
+        <script>
+            var ar=['Resh','bhar','harshi','divya','siri']
+            var x=document.getElementById('d1')
+            ar.forEach(function(value,index){
+                var y=document.createElement('li')
+                y.innerHTML=value
+                x.appendChild(y)
+            })
+            var s=document.getElementById('ip')
+            function abc(){
+                var n=ar.filter(function(value,index){
+                    return(value.startsWith(s.value))
+                })
+                gen(n);
+            }
+            function gen(k){
+                x.innerHTML=''
+                k.forEach(function(v,i){
+                    var y=document.createElement('li')
+                    y.innerHTML=v;
+                    x.appendChild(y);
+                })
+            }
+        </script>
+    </body>
+</html> -->

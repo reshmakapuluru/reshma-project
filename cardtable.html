@@ -1,0 +1,185 @@
+<html>
+
+<head>
+</head>
+
+<body>
+    
+        <button onclick="abc()" type="button" style="color: black; background-color: orange;">Female</button>
+        <button onclick="cba()" type="button" style="color: black; background-color: orange;">Male</button>
+
+        <br><br>
+        <div id="d8">
+
+        </div>
+    
+    <script>
+        
+        var people = [
+                        {
+                        "firstname": "praveen",
+                        "lastname": "gubbala",
+                        "age": 36,
+                        "gender": "male",
+                        "city": "hyd",
+                        "salary": 10000
+                        },
+                        {
+                        "firstname": "srikanth",
+                        "lastname": "gubbala",
+                        "age": 32,
+                        "gender": "male",
+                        "city": "bengaluru",
+                        "salary": 20000
+                        },
+                        {
+                        "firstname": "pradeep",
+                        "lastname": "reddy",
+                        "age": 21,
+                        "gender": "male",
+                        "city": "hyd",
+                        "salary": 25000
+                        },
+                        {
+                        "firstname": "mounika",
+                        "lastname": "mudiraj",
+                        "age": 20,
+                        "gender": "female",
+                        "city": "nalgonda",
+                        "salary": 30000
+                        },
+                        {
+                        "firstname": "nikhil",
+                        "lastname": "m",
+                        "age": 22,
+                        "gender": "male",
+                        "city": "guntur",
+                        "salary": 2000
+                        },
+                        {
+                        "firstname": "riya",
+                        "lastname": "bhadouria",
+                        "age": 14,
+                        "gender": "female",
+                        "city": "indore",
+                        "salary": 40000
+                        }
+                        ];
+     var d8=document.getElementById('d8')
+    var x=document.createElement('table')
+    var o=document.createElement('thead')
+  
+    var j=document.createElement('tfoot')
+    
+
+    x.style.border='1px solid'
+    
+    var y=document.createElement("tr")
+    var ar=["firstname","lastname","age","gender","city","salary"]
+    ar.forEach(function(values){
+        var d=document.createElement("th")
+        d.innerHTML=values;
+        d.style.border="1px solid"
+        d.style.textAlign="center"
+        y.appendChild(d)
+        o.appendChild(y)
+        x.appendChild(y)
+        d8.appendChild(x)
+        x.appendChild(o)
+        
+    })
+
+
+
+
+        function abc(){
+          j.innerHTML=""
+            people.forEach(function(value){
+        if(value.gender=='female'){
+    var a=document.createElement("tr")
+    a.style.border="1px solid"
+    var b=document.createElement("td")
+    b.style.border="1px solid"
+    var c=document.createElement("td")
+    c.style.border="1px solid"
+    var e=document.createElement("td")
+    e.style.border="1px solid"
+    var f=document.createElement("td")
+    f.style.border="1px solid"
+    var g=document.createElement("td")
+    g.style.border="1px solid"
+    var h=document.createElement("td")
+    h.style.border="1px solid"
+    b.innerHTML=value.firstname
+    c.innerHTML=value.lastname
+    e.innerHTML=value.age
+    f.innerHTML=value.gender
+    g.innerHTML=value.city
+    h.innerHTML=value.salary
+    
+
+    a.appendChild(b)
+    a.appendChild(c)
+    a.appendChild(e)
+    a.appendChild(f)
+    a.appendChild(g)
+    a.appendChild(h)
+    x.appendChild(a)
+    j.appendChild(a)
+    x.appendChild(j)
+    d8.appendChild(x)
+   
+    
+    }})
+    }
+
+
+
+        function cba(){
+           j.innerHTML=""
+            people.forEach(function(value){
+        if(value.gender=='male'){
+    var a=document.createElement("tr")
+    a.style.border="1px solid"
+    var b=document.createElement("td")
+    b.style.border="1px solid"
+    var c=document.createElement("td")
+    c.style.border="1px solid"
+    var e=document.createElement("td")
+    e.style.border="1px solid"
+    var f=document.createElement("td")
+    f.style.border="1px solid"
+    var g=document.createElement("td")
+    g.style.border="1px solid"
+    var h=document.createElement("td")
+    h.style.border="1px solid"
+    b.innerHTML=value.firstname
+    c.innerHTML=value.lastname
+    e.innerHTML=value.age
+    f.innerHTML=value.gender
+    g.innerHTML=value.city
+    h.innerHTML=value.salary
+    
+
+    a.appendChild(b)
+    a.appendChild(c)
+    a.appendChild(e)
+    a.appendChild(f)
+    a.appendChild(g)
+    a.appendChild(h)
+    x.appendChild(a)
+    d8.appendChild(x)
+    
+    
+    }})
+        }
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

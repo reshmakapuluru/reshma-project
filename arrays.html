@@ -93,9 +93,352 @@
                     console.log(a[i])
                 }
             }
-            // 16 For the Given array: [23,34,54,10,4,7] print the minimum number in an Array. Expected output: 4
+            // 1
+            var ar=[23,34,54,10,4,7];
+            a.forEach(function(a){
+                console.log(a);
+            });
+            // 2
             var a=[23,34,54,10,4,7];
-            
+            var d=a.splice(0,1);
+            console.log(a);
+            // 3
+            var a=[23,34,54,10,4,7];
+            var d=a.pop();
+            console.log(a);
+            // 4
+            var a=[23,34,54,10,4,7];
+            var e=a.splice(-5,-1);
+            console.log(a);
+            // 5
+
+            // 6
+            // 7
+            var a=[23,34,54,10,4,7];
+            var d=a.splice(2,5);
+            console.log(d);
+            // 8
+            var a=[23,34,54,10,4,7];
+            a.forEach(function(a){
+                if(a>x){
+                    console.log(a);
+                }
+            });
+            // 9 
+            var a=[23,34,54,10,4,7];
+            a.forEach(function(a){
+                if(a%2==0){
+                    console.log(a);
+                }
+            });
+            // 10
+            var a=[23,34,54,10,4,7];
+            a.forEach(function(a){
+                if(a%2!=0){
+                    console.log(a);
+                }
+            });
+            // 11
+            var a=[23,34,54,10,4,7];
+            a.forEach(function(a){
+                if(a>=10&a<=99){
+                    console.log(a);
+                }
+            });
+            // 12
+            var a=[23,34,54,10,4,7];
+            a.forEach(function(a){
+                if(a%5==0){
+                    console.log(a);
+                }
+            });
+            // 13
+            var a=[23,34,54,10,4,7];
+            a.forEach(function(a){
+                if(a%2==0 & a%3==0){
+                    console.log(a);
+                }
+            });
+            // 14
+            var a=[23,34,54,10,4,7];
+            a.forEach(function(a){
+                if(a%3==0 || a%5==0){
+                    console.log(a);
+                }
+            });
+            // 1
+            var a=[23,34,54,10,4,7];
+            var x=a.map(function(a,b){
+            });
+            console.log(a)
+            // 2
+            var a=[23,34,54,10,4,7];
+            var d=a.map(function(value,index){
+                if(index>0){
+                    console.log(value)
+                }
+            });
+            // 3
+            var a=[23,34,54,10,4,7];
+            var d=a.map(function(value,index){
+                if(index<a.length-1){
+                    console.log(value)
+                }
+            })
+            // 7
+            var a=[23,34,54,10,4,7];
+            var d=a.map(function(value,index){
+                if(index>=a.length-4){
+                    console.log(value)
+                }
+            })
+            // 8
+            var a=[23,34,54,10,4,7];
+            var d=a.map(function(a){
+                if(a>20){
+                    return a;
+                }
+            });
+            console.log(d);
+            // 9
+            var ar=[23,34,54,10,4,7];
+            var e=ar.map(function(a){
+                if(a%2===0){
+                    return a;
+                }
+
+            });
+            console.log(e);
+            // 10
+            var ar=[23,34,54,10,4,7];
+            var e=ar.map(function(a){
+                if (a%2!==0){
+                    return a;
+                }
+            });
+            console.log(e);
+            // 11
+            var a=[23,-34,-54,10,-4,7];
+            var e=a.map(function(a){
+                if(a>0){
+                    return a;
+                }
+            })
+            console.log(e);
+            // 12
+            var a=[23,34,54,10,4,7];
+            var e=a.map(function(a){
+                if(a>10&a<99){
+                    return a;
+                }
+            })
+            console.log(e);
+            // 13
+            var a=[23,34,54,10,4,7];
+            var e=a.map(function(a){
+                if(a%5==0){
+                    return a;
+                }
+            })
+            console.log(e);
+            // 14
+            var a=[23,34,54,10,4,7];
+            var e=a.map(function(a){
+                if(a%2==0 & a%3==0){
+                    return a;
+                }
+            })
+            console.log(e);
+            // 15
+            var a=[23,34,54,10,4,7];
+            var d=a.map(function(a){
+                if(a%3==0 || a%5==0){
+                    return a;
+                }
+            })
+            console.log(d);
+            // 1
+            var a=[23,34,54,10,4,7];
+            var x=a.filter(function(a,b){
+            });
+            console.log(a)
+            // 2
+            var a=[23,34,54,10,4,7];
+            var d=a.filter(function(value,index){
+                if(index>0){
+                    console.log(value)
+                }
+            });
+            var a=[23,34,54,10,4,7];
+            var d=a.filter(function(value,index){
+                if(index<a.length-1){
+                    console.log(value)
+                }
+            })
+            // 7
+            var a=[23,34,54,10,4,7];
+            var d=a.filter(function(value,index){
+                if(index>=a.length-4){
+                    console.log(value)
+                }
+            })
+            // 8
+            var a=[23,34,54,10,4,7];
+            var d=a.filter(function(a){
+                if(a>20){
+                    return a;
+                }
+            });
+            console.log(d);
+            // 9
+            var ar=[23,34,54,10,4,7];
+            var e=ar.filter(function(a){
+                if(a%2===0){
+                    return a;
+                }
+
+            });
+            console.log(e);
+            // 10
+            var ar=[23,34,54,10,4,7];
+            var e=ar.filter(function(a){
+                if(a%2!==0){
+                    return a;
+                }
+
+            });
+            console.log(e);
+            // 11
+            var a=[23,-34,-54,10,-4,7];
+            var e=a.filter(function(a){
+                if(a>0){
+                    return a;
+                }
+            })
+            console.log(e);
+            // 12
+            var a=[23,34,54,10,4,7];
+            var e=a.filter(function(a){
+                if(a>10&a<99){
+                    return a;
+                }
+            })
+            console.log(e);
+            // 13
+            var a=[23,34,54,10,4,7];
+            var e=a.filter(function(a){
+                if(a%5==0){
+                    return a;
+                }
+            })
+            console.log(e);
+            // 14
+            var a=[23,34,54,10,4,7];
+            var e=a.filter(function(a){
+                if(a%2==0 & a%3==0){
+                    return a;
+                }
+            })
+            console.log(e);
+            // 15
+            var a=[23,34,54,10,4,7];
+            var d=a.filter(function(a){
+                if(a%3==0 || a%5==0){
+                    return a;
+                }
+            })
+            console.log(d);
+            // 1
+            var a=[23,34,54,10,4,7];
+            var x=a.reduce(function(accumulator,value,index,array){
+            });
+            console.log(a)
+            // 2
+            var a=[23,34,54,10,4,7];
+            var d=a.reduce(function(accumulator,value,index,array){
+                if(index>0){
+                    console.log(value)
+                }
+            });
+            // 3
+            var a=[23,34,54,10,4,7];
+            var d=a.reduce(function(accumulator,value,index,array){
+                if(index<a.length-1){
+                    console.log(value)
+                }
+            })
+            // 7
+            var a=[23,34,54,10,4,7];
+            var d=a.reduce(function(accumulator,value,index,array){
+                if(index>=a.length-4){
+                    console.log(value)
+                }
+            })
+            // 8
+            var a=[23,34,54,10,4,7];
+            var d=a.reduce(function(accumulator,value,index,array){
+                if(a>20){
+                    return value;
+                }
+            });
+            console.log(d);
+            // 9
+            var ar=[23,34,54,10,4,7];
+            var e=ar.reduce(function(accumulator,value,index,array){
+                if(a%2===0){
+                    return value;
+                }
+            });
+            console.log(e);
+            // 10
+            var ar=[23,34,54,10,4,7];
+            var e=ar.reduce(function(accumulator,value,index,array){
+                if(a%2!==0){
+                    return value;
+                }
+
+            });
+            console.log(e);
+            // 11
+            var a=[23,-34,-54,10,-4,7];
+            var e=a.reduce(function(accumulator,value,index,array){
+                if(a>0){
+                    return a;
+                }
+            })
+            console.log(e);
+            // 12
+            var a=[23,34,54,10,4,7];
+            var e=a.reduce(function(accumulator,value,index,array){
+                if(a>10&a<99){
+                    return value;
+                }
+            })
+            console.log(e);
+            // 13
+            var a=[23,34,54,10,4,7];
+            var e=a.reduce(function(accumulator,value,index,array){
+                if(a%5==0){
+                    return value;
+                }
+            })
+            console.log(e);
+            // 14
+            var a=[23,34,54,10,4,7];
+            var e=a.reduce(function(accumulator,value,index,array){
+                if(a%2==0 & a%3==0){
+                    return value;
+                }
+            })
+            console.log(e);
+            // 15
+            var a=[23,34,54,10,4,7];
+            var d=a.reduce(function(accumulator,value,index,array){
+                if(a%3==0 || a%5==0){
+                    return value;
+                }
+            })
+            console.log(d);
         </script>
     </body>
 </html>
